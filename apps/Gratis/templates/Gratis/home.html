@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login and Registration</title>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'HandyHelper/css/bootstrap.css' %}">
+    <script src="{% static 'login/js/script.js' %}"></script>
+    <style>
+    .container{
+        width:350px;
+        /* height: 500px; */
+        margin: 0px auto;
+        padding: 20px;
+        border: 2px solid black;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .form{
+       width: 500px;
+       display: inline-block;
+    }
+    .login{
+        width: 400px;
+       text-align: left;
+       display: inline-block;
+       vertical-align: top;
+    }
+    .p{
+       display: inline-block;
+    }
+    .error{
+        color: red;
+    }
+    img{
+        width: 100px;
+        vertical-align: bottom;
+    }
+    </style>
+</head>
+<body>
+    
+        <p style= text-align:right><a href="/logout">Log Out</a></p>
+        <h1>Start with Gratis.</h1>
+        <h2>Live with more.</h2>
+        <img src="{% static '../static/Gratis/images/TurnpikeHustlerLogo.png' %}" />
+        <img src="../static/Gratis/images/facebook.png" alt="twitch.png">
+    </div>
+</body>
+</html>
+    

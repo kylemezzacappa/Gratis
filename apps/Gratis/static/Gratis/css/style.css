@@ -1,0 +1,90 @@
+
+* {
+    vertical-align: baseline;
+    font-weight: inherit;
+    font-family: sans-serif;
+    font-style: inherit;
+    font-size: 100%;
+    border: 0 none;
+    outline: 0;
+    padding: 0;
+    }
+
+    .navbutton{
+        text-decoration: none;
+        color: white;
+        
+    }
+    
+    .wrapper {
+        text-align: right;
+        margin: 0px auto;
+        vertical-align: top;
+    }
+    .display{
+        text-align: left;
+        padding: 20px;
+        width: 1000px;
+        margin: 0px auto;
+        
+    }
+    
+    .home-button{
+        margin-top: 30px;
+        margin-right: 90px;
+    }
+    .main{
+        width: 500px;
+        padding: 2em;
+        
+        border-right: 2px solid rgb(228, 231, 230);
+        text-align: left;
+        display: inline-block;
+    }
+    .sidebar{
+        width: 400px;
+        padding:2em;
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 20px;
+        text-align: left;
+    }
+    
+    h1{
+        font-size: 45px;
+        font-weight: bold;
+        margin-bottom: 1em;
+    }
+    th, td{
+        padding: 8px 20px;
+        margin: 20px 0;
+        border-bottom: 1px solid rgb(228, 231, 230);
+    }
+    table{
+        margin: 20px 0px;
+    }
+    
+    form{
+        margin: 20px 0px;
+    }
+    form input{
+        padding: 5px;
+        margin-bottom: 20px;
+        background-color: rgb(207, 206, 206);
+        border: 1px solid gray;
+        width: 500px;
+    }
+    textarea{
+        padding: 5px;
+        margin-bottom: 20px;
+        background-color: rgb(207, 206, 206);
+        border: 1px solid gray;
+        width: 500px;
+    }
+    
+    span, h3{
+        font-weight: bold;
+    }
+    ul{
+        margin-left: 20px;
+    }

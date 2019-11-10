@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'Job_directory/css/style.css' %}">
+
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My bonuses {{request.session.user_name}} </title>
+    <style>
+            .box{
+                width: 200px;
+                margin: 0px auto;
+                padding: 20px;
+                border: 2px solid black;
+            }
+            .form{
+               width: 500px;
+               display: inline-block;
+            }
+            .login{
+                width: 400px;
+               text-align: left;
+               display: inline-block;
+               vertical-align: top;
+            }
+            .error{
+                color: red;
+            }
+            .bonuses{
+                display: inline-block;
+                width: 200px;
+            }
+            .addBonuses{
+                display: inline-block;
+                vertical-align: top;
+            }
+            </style>
+</head>
+<body>
+<p style= text-align:right><a href="/bonuses">Back</a> | <a href="/logout">Log Out</a></p>
+
+
+<div class="display">
+        {% if messages %}
+        <ul> {% for message in messages %} 
+            <li {% if message.tags %} class ="{{message.tags}}" {% endif %}>{{message}}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <p>First Name {{user.first_name}}</p>
+        <p>Last Name {{user.last_name}}</p>
+        <p>Email {{user.email}}</p>        
+        <h1>Edit My Account</h1>
+            <div>
+                <form action="/edit_account/{{user.id}}" method="POST">
+                    {% csrf_token %}
+                    <h3>First Name 
+                        <input type="text" name="first_name" id="first_name"> 
+                    </h3>
+                    <h3>Last Name 
+                        <input type="text" name="last_name" id="last_name">
+                    </h3>
+                    <h3>Email 
+                        <input type="text" name="email" id="email">
+                    </h3>
+                    <input class="btn" type="submit" value="Update">
+                </form>
+            </div>
+    </div>
+
+
+
+<!-- <div class="addQuotes">
+{% for quote in allQuotes %}
+    <p> {% if thisQuote.creator.id == quote.creator.id %}
+        <div class="box">
+            {{quote.quoted_by}}:
+            "{{quote.Message}}"
+            {% else %}
+            {% endif %}
+        </div>  
+    </p> 
+{% endfor %}
+</div>    -->
+
+
+
+
+<!-- {{user.first_name}}
+{{allQuotes.creator}}
+{{Quote.creator}}
+{{poster.first_name}}
+{{allQuotes}}
+{{quote_id}}
+<p>{{poster.first_name}}</p>
+
+    <h1>Posts by {{request.session.user_name}}</h1>    
+    {% for quote in allQuotes %}  
+    <p>     {% if quote_id == quote.creator %}
+            <a method="GET" href="/quotes/{{quote.id}}">Edit</a>|<a method="GET" href="/delete_quote/{{current_user.id}}/{{quote.id}}">Delete</a>
+            {% else %}
+            {% endif %}
+            {{quote.quoted_by}}
+            {{quote.Message}}
+    </p>
+    <p>posted by {{quote.creator.first_name}}</p>
+    {% endfor %} -->
+</div>
+</body> 
+</body>
+</html>
